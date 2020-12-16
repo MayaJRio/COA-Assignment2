@@ -19,6 +19,7 @@ void print_hex(int dnum)
     cout<<"\n The Hexadecimal equivalent of "<<dnum<<" is: "<<hnum;
 
 }
+
 int main()
 {
     int a[10], n, i,temp;
