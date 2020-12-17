@@ -16,30 +16,36 @@ void print_hex(int dnum)
         hnum=hex[rem]+hnum;
         temp=temp/16;
     }
-    cout<<"\n The Hexadecimal equivalent of "<<dnum<<" is: "<<hnum;
+    cout<<"          \t";
+    cout<<hnum<<endl;
 
 }
-
-int main()
+void print_bin(int num)
 {
-    int a[10], n, i,temp;
-    cout<<"Enter the number to convert: ";
-    cin>>n;
-    temp=n;
-
-    for(i=0; n>0; i++)
+    int a[10],i,temp=num;
+    cout<<"\t\t";
+    for(i=0; num>0; i++)
     {
-    a[i]=n%2;
-    n= n/2;
+        a[i]=num%2;
+        num= num/2;
     }
-    cout<<"Binary of the given number= ";
     if(temp==0)
     {
         cout<<"0";
     }
     for(i=i-1 ;i>=0 ;i--)
     {
-    cout<<a[i];
+        cout<<a[i];
     }
-    print_hex(temp);
+}
+int main()
+{
+    cout<<"Decimal values\tBinary values\tHexadecimal values:"<<endl;
+    for (int i=0; i<=256; i++)
+    {
+        cout<<"\t";
+        cout<<i;
+        print_bin(i);
+        print_hex(i);
+    }
 }
